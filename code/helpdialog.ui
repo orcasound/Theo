@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>HelpDialog</class>
+ <widget class="QDialog" name="HelpDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1482</width>
+    <height>878</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QDialogButtonBox" name="buttonBox">
+   <property name="geometry">
+    <rect>
+     <x>1140</x>
+     <y>840</y>
+     <width>341</width>
+     <height>32</height>
+    </rect>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+   <property name="standardButtons">
+    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+   </property>
+  </widget>
+  <widget class="QPlainTextEdit" name="plainTextEdit">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>1461</width>
+     <height>821</height>
+    </rect>
+   </property>
+   <property name="plainText">
+    <string>Theo is a program to convert digitized points on a two dimensional image into coordinates on the surface of the Earth (UTM's or Lat/Lon)
+
+Theo needs to be calibrated using 4 fiducial marks spread as far as possible over the scene.  At each point, the UTM's and height above mean sea level are needed.
+
+Calibration procedures are detailed in the README.pdf file.
+
+In short, For each fiducial mark, zoom in (&lt;CTRL&gt; Mouse Wheel) and put the cursor on where you think the fiducial mark should be and then hold down the corresponding number key and click the mouse.  The y component of this click is by far the most important so be careful! Do this for fiducial marks 1, 2, 3, and 4. 
+
+The height of the theodolite above actual sea level is calculated from tidal heights that are encoded in the image file names by a python program.  See ReportOnPythonTideProgram.pdf
+
+Digitized points are saved to disk in R dataframe format in text files of type .theo </string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>HelpDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>HelpDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
