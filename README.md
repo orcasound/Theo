@@ -1,11 +1,11 @@
 # Theo
-C++ Code to determine UTM coordinates from 2-D image
+C++ Code to determine UTM coordinates from 2-D photographic image
 
 Theo Update:  9/8/2020
 
 The current revision of Theo is version 0.9 dated Sept. 8, 2020
 
-A number of new features are included and the UTM geometry has been recoded.  After the fourth fiducial is ‘Number Clicked’, a wait cursor appears while the UTMx and UTMy of every accessible point on the camera image is computed.  After that a <Ctrl> click on a point just does a look up in these computed numbers and computes the range and azimuth and fills in the corresponding boxes at the bottom of the screen.
+A number of new features are included and the UTM geometry has been re-coded.  After the fourth fiducial is ‘Number Clicked’, a wait cursor appears while the UTMx and UTMy of every accessible point on the camera image is computed.  After that a <Ctrl> click on a point just does a look up in these computed numbers and computes the range and azimuth and fills in the corresponding boxes at the bottom of the screen.
 
 To use Theo, 
     1. click on Choose Location to select the .loc file for the image(s) you plan to process.
@@ -19,8 +19,6 @@ I recommend setting up your project with a number of folders organized as follow
 TheoProjectFiles
 
 code	images	  locfiles 	README	theoOutput
-
-You will see paths to some of these folders in the screenshot on the next page.
 
 Put the Theo C++ code folder in the code folder.  Make sure you have the current versions of theo.cpp, theo.h and theo.ui (version 0.9 dated Sept. 8, 2020).  When Qt compiles the code it will create various build folders in the code directory.  The program will run fastest if you compile a Release version which is selected in the Qt programming interface at the lower left.
 
